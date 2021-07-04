@@ -21,6 +21,11 @@ public class PlayeMovement : MonoBehaviour
     }
 
 
-    
+    private void Run()
+    {
+        float x = Input.GetAxis("Horizontal");
+        Vector2 playerVelocity = new Vector2(x * runSpeed, myRigidBody.velocity.y);
+        myRigidBody.velocity = playerVelocity;
+    }
 
 }
